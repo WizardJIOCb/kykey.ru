@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>КУКЕЙ — админка</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&family=Unbounded:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">КУКЕЙ</a>
+    <nav class="desktop-nav" aria-label="Админ навигация">
+      <a href="#products">Товары</a>
+      <a href="#banners">Баннеры</a>
+      <a href="#orders">Заказы</a>
+      <a href="/">Сайт</a>
+    </nav>
+    <div class="header-actions">
+      <button class="account-button" id="logout" type="button">Выйти</button>
+    </div>
+  </header>
+
+  <main class="admin-shell">
+    <section class="admin-login" id="loginView">
+      <h1>Вход в админку</h1>
+      <form id="adminLogin">
+        <input name="email" type="email" value="admin@kykey.ru" placeholder="Email" required>
+        <input name="password" type="password" placeholder="Пароль" required>
+        <button class="primary-button" type="submit">Войти</button>
+      </form>
+    </section>
+
+    <section class="admin-grid hidden" id="adminView">
+      <div class="admin-panel" id="products">
+        <div class="admin-panel-head">
+          <h2>Товары</h2>
+          <button class="primary-button" id="newProduct" type="button">Новый товар</button>
+        </div>
+        <form class="editor" id="productForm">
+          <input type="hidden" name="id">
+          <label>Название<input name="name" required></label>
+          <label>Категория<select name="categoryId" required></select></label>
+          <label>Цена<input name="price" type="number" min="1" required></label>
+          <label>Ккал / мета<input name="calories"></label>
+          <label>Тон<select name="imageTone"><option>yellow</option><option>mint</option><option>coral</option><option>black</option></select></label>
+          <label>Описание<textarea name="description"></textarea></label>
+          <label class="check"><input name="isVegan" type="checkbox"> Вегетарианское</label>
+          <label class="check"><input name="isActive" type="checkbox" checked> Активно</label>
+          <button class="primary-button" type="submit">Сохранить товар</button>
+        </form>
+        <div class="admin-list" id="productList"></div>
+      </div>
+
+      <div class="admin-panel" id="banners">
+        <div class="admin-panel-head">
+          <h2>Баннеры</h2>
+          <button class="primary-button" id="newBanner" type="button">Новый баннер</button>
+        </div>
+        <form class="editor" id="bannerForm">
+          <input type="hidden" name="id">
+          <label>Заголовок<input name="title" required></label>
+          <label>Подзаголовок<textarea name="subtitle"></textarea></label>
+          <label>Кнопка<input name="buttonText"></label>
+          <label>Ссылка<input name="buttonLink"></label>
+          <label>Тема<select name="theme"><option>yellow</option><option>mint</option><option>coral</option><option>black</option></select></label>
+          <label class="check"><input name="isActive" type="checkbox" checked> Активен</label>
+          <button class="primary-button" type="submit">Сохранить баннер</button>
+        </form>
+        <div class="admin-list" id="bannerList"></div>
+      </div>
+
+      <div class="admin-panel wide" id="orders">
+        <div class="admin-panel-head">
+          <h2>Заказы</h2>
+          <button class="secondary-button dark" id="refreshOrders" type="button">Обновить</button>
+        </div>
+        <div class="orders-list" id="ordersList"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="/admin/admin.js"></script>
+</body>
+</html>

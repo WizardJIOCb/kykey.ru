@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Кукей — кафе завтраков в Октябрьском. Работаем ежедневно с 09:00 до 21:00. Проспект Ленина 15.">
+  <meta name="theme-color" content="#111111">
+  <title>КУКЕЙ — кафе завтраков в Октябрьском</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&family=Unbounded:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Кукей">КУКЕЙ</a>
+    <nav class="desktop-nav" aria-label="Основная навигация">
+      <a href="#menu">Меню</a>
+      <a href="#constructor">Конструктор</a>
+      <a href="#contacts">Контакты</a>
+      <a href="#map">Как добраться</a>
+    </nav>
+    <div class="header-actions">
+      <a class="phone" href="tel:+79014782050">+7 (901) 478-20-50</a>
+      <button class="cart-button" id="cartOpen" type="button">Корзина <span id="cartCount">0</span></button>
+      <button class="account-button" id="accountOpen" type="button">Войти</button>
+      <button class="mobile-menu-button" id="mobileMenuOpen" type="button" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация">
+    <button type="button" id="mobileMenuClose" aria-label="Закрыть меню">×</button>
+    <a href="#menu">Меню</a>
+    <a href="#constructor">Конструктор</a>
+    <a href="#contacts">Контакты</a>
+    <a href="#map">Как добраться</a>
+    <a href="/admin">Админка</a>
+  </nav>
+
+  <main id="top">
+    <section class="hero page-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Октябрьский, Проспект Ленина 15</p>
+        <h1>КУКЕЙ</h1>
+        <p class="hero-lead">Завтраки, круассаны, кофе и горячая еда каждый день с 09:00 до 21:00.</p>
+        <div class="hero-actions">
+          <a class="primary-link" href="#menu">Заказать сейчас</a>
+          <a class="secondary-link" href="https://wa.me/79014782050" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-plate" aria-hidden="true">
+        <div class="plate-main">
+          <span></span>
+          <strong>09:00-21:00</strong>
+        </div>
+        <div class="plate-note">завтраки весь день</div>
+      </div>
+    </section>
+
+    <section class="banner-strip page-shell" id="banners" aria-label="Акции"></section>
+
+    <section class="section page-shell" id="menu">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Меню</p>
+          <h2>Выбирайте, добавляйте в корзину, оформляйте заказ</h2>
+        </div>
+        <p>Тестовый каталог уже в базе. Цены и видимость блюд можно менять в админке.</p>
+      </div>
+      <div class="tabs" id="tabs"></div>
+      <div class="products-grid" id="products"></div>
+    </section>
+
+    <section class="section page-shell constructor" id="constructor">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Конструктор</p>
+          <h2>Соберите свой завтрак</h2>
+        </div>
+        <p>Быстрые добавки для тех, кто любит контролировать тарелку до последнего тоста.</p>
+      </div>
+      <div class="constructor-grid" id="constructorItems"></div>
+    </section>
+
+    <section class="section page-shell contacts" id="contacts">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Контакты</p>
+          <h2>Связаться с Кукей</h2>
+        </div>
+        <p>Звоните, пишите в мессенджеры или приезжайте за кофе и завтраком.</p>
+      </div>
+      <div class="contact-grid">
+        <a class="contact-card" href="tel:+79014782050"><span>Тел</span><strong>+7 (901) 478-20-50</strong><small>Звоните в часы работы</small></a>
+        <a class="contact-card" href="https://wa.me/79014782050" target="_blank" rel="noopener"><span>WA</span><strong>WhatsApp</strong><small>Быстрый заказ и вопросы</small></a>
+        <a class="contact-card" href="https://t.me/kukei_oktyabrsky" target="_blank" rel="noopener"><span>TG</span><strong>@kukei_oktyabrsky</strong><small>Новости и акции</small></a>
+        <a class="contact-card" href="mailto:hello@kukei.ru"><span>@</span><strong>hello@kukei.ru</strong><small>Сотрудничество и кейтеринг</small></a>
+      </div>
+    </section>
+
+    <section class="section page-shell map-section" id="map">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Адрес</p>
+          <h2>Проспект Ленина 15</h2>
+        </div>
+        <p>Октябрьский, Республика Башкортостан. Ежедневно с 09:00 до 21:00.</p>
+      </div>
+      <div class="map-wrap">
+        <div class="map-card">
+          <strong>Кукей</strong>
+          <span>Проспект Ленина 15, Октябрьский</span>
+          <a href="https://yandex.ru/maps/?text=%D0%9E%D0%BA%D1%82%D1%8F%D0%B1%D1%80%D1%8C%D1%81%D0%BA%D0%B8%D0%B9%2C%20%D0%9F%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%B0%2015" target="_blank" rel="noopener">Открыть карту</a>
+        </div>
+        <iframe title="Карта Кукей" src="https://yandex.ru/map-widget/v1/?ll=53.471659%2C54.481534&z=16&text=%D0%9E%D0%BA%D1%82%D1%8F%D0%B1%D1%80%D1%8C%D1%81%D0%BA%D0%B8%D0%B9%2C%20%D0%9F%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%B0%2015" loading="lazy"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer page-shell">
+    <div>
+      <a class="brand" href="#top">КУКЕЙ</a>
+      <p>Завтраки и настоящий кофе круглый день.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#menu">Меню</a>
+      <a href="/admin">Админка</a>
+      <a href="mailto:hello@kukei.ru">hello@kukei.ru</a>
+    </div>
+  </footer>
+
+  <aside class="drawer" id="cartDrawer" aria-label="Корзина" aria-hidden="true">
+    <div class="drawer-panel">
+      <button class="drawer-close" id="cartClose" type="button">×</button>
+      <h2>Корзина</h2>
+      <div class="cart-items" id="cartItems"></div>
+      <form class="order-form" id="orderForm">
+        <input name="customerName" placeholder="Имя" autocomplete="name" required>
+        <input name="phone" placeholder="Телефон" autocomplete="tel" required>
+        <input name="address" placeholder="Адрес доставки или самовывоз" autocomplete="street-address">
+        <textarea name="comment" placeholder="Комментарий к заказу"></textarea>
+        <button class="primary-button" type="submit">Оформить заказ</button>
+      </form>
+    </div>
+  </aside>
+
+  <aside class="drawer" id="accountDrawer" aria-label="Аккаунт" aria-hidden="true">
+    <div class="drawer-panel">
+      <button class="drawer-close" id="accountClose" type="button">×</button>
+      <h2>Аккаунт</h2>
+      <div id="accountState"></div>
+      <form class="auth-form" id="loginForm">
+        <h3>Вход</h3>
+        <input name="email" type="email" placeholder="Email" required>
+        <input name="password" type="password" placeholder="Пароль" required>
+        <button class="primary-button" type="submit">Войти</button>
+      </form>
+      <form class="auth-form" id="registerForm">
+        <h3>Регистрация</h3>
+        <input name="name" placeholder="Имя" autocomplete="name" required>
+        <input name="phone" placeholder="Телефон" autocomplete="tel">
+        <input name="email" type="email" placeholder="Email" required>
+        <input name="password" type="password" placeholder="Пароль от 6 символов" required>
+        <button class="secondary-button" type="submit">Создать аккаунт</button>
+      </form>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

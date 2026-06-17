@@ -1,0 +1,26 @@
+{
+  "name": "kykey.ru",
+  "version": "1.0.0",
+  "description": "Kykey cafe website with menu, orders and admin panel",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node src/seed.js"
+  },
+  "keywords": [
+    "kykey",
+    "cafe",
+    "restaurant"
+  ],
+  "author": "Kykey",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^12.11.1",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "playwright": "^1.61.0"
+  }
+}

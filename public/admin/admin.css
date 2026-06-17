@@ -1,0 +1,136 @@
+.admin-shell {
+  width: min(1240px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 34px 0 70px;
+}
+
+.admin-login {
+  width: min(460px, 100%);
+  margin: 8vh auto;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 28px;
+}
+
+.admin-login h1,
+.admin-panel h2 {
+  margin: 0 0 18px;
+  font: 900 30px/1.1 Unbounded, sans-serif;
+}
+
+.admin-login form,
+.editor {
+  display: grid;
+  gap: 10px;
+}
+
+.hidden { display: none; }
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+}
+
+.admin-panel {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.admin-panel.wide { grid-column: 1 / -1; }
+
+.admin-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.editor {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+
+.editor label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.editor .check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.editor .check input {
+  width: auto;
+  min-height: auto;
+}
+
+.admin-list,
+.orders-list {
+  display: grid;
+  gap: 10px;
+}
+
+.admin-row,
+.order-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.admin-row strong,
+.order-row strong { display: block; }
+.admin-row small,
+.order-row small { color: var(--muted); font-weight: 700; }
+
+.row-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.row-actions button,
+.status-select {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 8px;
+  min-height: 38px;
+  padding: 0 10px;
+  font-weight: 900;
+}
+
+.secondary-button.dark {
+  background: var(--black);
+  color: var(--white);
+}
+
+.order-items {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+@media (max-width: 980px) {
+  .admin-grid { grid-template-columns: 1fr; }
+  .admin-row,
+  .order-row { grid-template-columns: 1fr; }
+  .row-actions { flex-wrap: wrap; }
+}
